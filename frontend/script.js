@@ -18,6 +18,7 @@ function displayAllData(data) {
   displayLinkTitleText(data);
   displayLinkedInLink(data);
   displayGitHubLink(data);
+  displayContact(data)
 }
 
 function displayProfessionalName(n) {
@@ -59,6 +60,11 @@ function displayGitHubLink(data) {
   let githubLink = document.getElementById('githubLink');
   githubLink.innerHTML = data.githubLink.text;
   githubLink.href = data.githubLink.link;
+}
+
+function displayContact(data) {
+  let contactText = document.getElementById('contactText')
+  contactText.innerHTML = data.contactText
 }
 
 getData();
